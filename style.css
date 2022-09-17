@@ -1,0 +1,110 @@
+@import url("https://fonts.google.com/specimen/Manrope");
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Neon-Green-hover: hsl(167, 100%, 52%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Font-size:(quote): 28px;
+    --Family: "Manrope";
+    --Weights: 800;
+    --mobile-svg:url("./images/pattern-divider-mobile.svg");
+    --desktop-svg:url("./images/pattern-divider-desktop.svg");
+    --dice-svg:url("./images/icon-dice.svg")
+}
+body{
+    margin: 0px;
+    padding:0px;
+    background-color: var(--Dark-Blue);
+    height:100%;
+    font-family: var(--Family);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: var(--Font-size);
+    
+}
+
+footer{
+    position: absolute;
+   color:var(--Light-Cyan);
+   bottom: 0px;
+}
+.dice-container:hover{
+    background-color:var(--Neon-Green-hover) ;
+}
+
+@media screen and (max-width:375px) {
+    .advice-container{
+       display: flex; 
+       flex-direction: column;
+       align-items: center;
+       background-color: var(--Dark-Grayish-Blue);
+       border-radius: 8px;
+       color: var(--Light-Cyan);
+       font-weight: var(--Weights);
+       padding: 5% 5%;
+       width: fit-content;
+    }
+    .advice-id{
+        color:var(--Neon-Green);
+        font-size: small;
+    }
+    .svg{
+        width: 100%;
+        content: var(--mobile-svg);
+        margin-bottom: 1.5rem;
+        
+    }
+    .dice{
+        content: var(--dice-svg);
+        width: 15px;
+    }
+    .dice-container{
+        background-color: var(--Neon-Green);
+        padding: 0.5em;
+        border-radius: 100%;
+        margin-top: -15px;
+    }
+     
+}
+@media screen and (max-width:1440px) {
+    .advice-container{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Dark-Grayish-Blue);
+        margin-top: 6rem;
+        border-radius: 8px;
+        color: var(--Light-Cyan);
+        font-weight: var(--Weights);
+        width: 30%;
+        padding: 5% 5%;
+     }
+     .advice-id{
+         color:var(--Neon-Green);
+         font-size: small;
+     }
+     .svg{
+         width: 100%;
+         content: var(--desktop-svg);
+         margin: 5px 0px 20px 0px;
+         
+     }
+     .dice{
+         content: var(--dice-svg);
+         width: 15px;
+     }
+     .dice-container{
+         background-color: var(--Neon-Green);
+         padding: 0.5em;
+         border-radius: 100%;
+         margin-top: -2.5vh;
+     }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
