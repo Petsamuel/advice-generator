@@ -6,16 +6,19 @@
     --Grayish-Blue: hsl(217, 19%, 38%);
     --Dark-Grayish-Blue: hsl(217, 19%, 24%);
     --Dark-Blue: hsl(218, 23%, 16%);
-    --Font-size:(quote): 28px;
+    --Font-size: 28px;
     --Family: "Manrope";
     --Weights: 800;
     --mobile-svg:url("./images/pattern-divider-mobile.svg");
     --desktop-svg:url("./images/pattern-divider-desktop.svg");
     --dice-svg:url("./images/icon-dice.svg")
 }
-body{
+*{
     margin: 0px;
     padding:0px;
+    
+}
+body{
     background-color: var(--Dark-Blue);
     height:100%;
     font-family: var(--Family);
@@ -23,12 +26,20 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: var(--Font-size);
     
+    place-items:center;
+    margin:15%;
+    box-sizing:border-box;
 }
+p{
+    font-size: var(--Font-size);
+    padding-top:6px;
+    text-align:center;
+    word-break:keep-all;
 
+ }
 footer{
-    position: absolute;
+    position: fixed;
    color:var(--Light-Cyan);
    bottom: 0px;
 }
@@ -45,18 +56,18 @@ footer{
        border-radius: 8px;
        color: var(--Light-Cyan);
        font-weight: var(--Weights);
-       padding: 5% 5%;
+       padding: 2em 10em;
        width: fit-content;
+
     }
     .advice-id{
         color:var(--Neon-Green);
         font-size: small;
     }
+    
     .svg{
         width: 100%;
-        content: var(--mobile-svg);
-        margin-bottom: 1.5rem;
-        
+        content: var(--mobile-svg);  
     }
     .dice{
         content: var(--dice-svg);
@@ -68,6 +79,9 @@ footer{
         border-radius: 100%;
         margin-top: -15px;
     }
+    p{
+        font-size:15px;
+    }
      
 }
 @media screen and (max-width:1440px) {
@@ -77,17 +91,21 @@ footer{
         justify-content: center;
         align-items: center;
         background-color: var(--Dark-Grayish-Blue);
-        margin-top: 6rem;
+        width: fit-content;
         border-radius: 8px;
         color: var(--Light-Cyan);
         font-weight: var(--Weights);
-        width: 30%;
         padding: 5% 5%;
+        
      }
+     
      .advice-id{
          color:var(--Neon-Green);
          font-size: small;
      }
+     .icon-svg{
+        margin-top: 3%;
+    }
      .svg{
          width: 100%;
          content: var(--desktop-svg);
