@@ -45,6 +45,7 @@ footer{
 }
 .dice-container:hover{
     background-color:var(--Neon-Green-hover) ;
+    box-shadow: 0 0 20 white;
 }
 
 @media screen and (max-width:375px) {
@@ -125,4 +126,4 @@ footer{
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(54, 45%, 44%); }
